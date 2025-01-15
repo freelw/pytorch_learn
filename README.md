@@ -27,3 +27,7 @@ conda activate d2l
 ## install torch
 
 pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu126
+
+## install d2l
+
+pip install d2l==1.0.3
