@@ -10,13 +10,13 @@ def gpu(i=0):  #@save
     """Get a GPU device."""
     return torch.device(f'cuda:{i}')
 
-cpu(), gpu(), gpu(1)
+print (cpu(), gpu(), gpu(1))
 
 def num_gpus():  #@save
     """Get the number of available GPUs."""
     return torch.cuda.device_count()
 
-num_gpus()
+print (num_gpus())
 
 def try_gpu(i=0):  #@save
     """Return gpu(i) if exists, otherwise return cpu()."""
@@ -28,4 +28,4 @@ def try_all_gpus():  #@save
     """Return all available GPUs, or [cpu(),] if no GPU exists."""
     return [gpu(i) for i in range(num_gpus())]
 
-try_gpu(), try_gpu(10), try_all_gpus()
+print (try_gpu(), try_gpu(10), try_all_gpus())
